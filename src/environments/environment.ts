@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  API_URL:'mongodb+srv://LeoGrrz:Colombia2020@cluster0.hgh0w.mongodb.net/superAhorro?retryWrites=true&w=majority'
 };
 
 /*

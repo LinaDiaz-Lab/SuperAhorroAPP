@@ -1,0 +1,87 @@
+<div class="fondo">
+<div class="contenedor my-2">
+    <div class="form-row">
+      <div class="form-group col-md-12 text-center">
+        <img src="../../../../assets/img/usuario.png" class="imagen" />
+        <h1 class="H1">Registrate</h1>
+      </div>
+    </div>
+    <!--datos de registro-->
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <label class="titulo">Usuario:</label>
+        <input
+          type="text"
+          class="form-control"
+          name="nombre"
+          placeholder="Ingresa tu nombre:"
+        />
+        <label class="titulo">Numero de Telefono:</label>
+        <input
+          type="text"
+          class="form-control"
+          name="edad"
+          placeholder="Ingresa tu telefono:"
+        />
+        <label class="titulo">Email:</label>
+        <input
+          type="email"
+          class="form-control"
+          name="edad"
+          placeholder="Ingresa tu correo:"
+        />
+        <label class="titulo">Contraseña:</label>
+        <input
+          type="password"
+          class="form-control"
+          name="edad"
+          placeholder="Ingresa una contraseña"
+        />
+        <label class="titulo">Documento:</label>
+        <form>
+          <div class="row">
+            <div class="col">
+              <select class="custom-select custom-select-lg mb-2">
+                <option value="1">Cedula de ciudadania</option>
+                <option value="2">Pasaporte</option>
+                <option value="3">Licencia</option>
+              </select>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Nº" />
+            </div>
+          </div>
+        </form>
+
+        <div class="custom-control custom-checkbox">
+          <input
+            type="checkbox"
+            class="custom-control-input"
+            id="customCheck1"
+          />
+          <label class="terminos custom-control-label" for="customCheck1"
+            >Acepto terminos y condiciones, y autorizo el tratamiento de mis
+            datos personales con las siguientes condiciones</label
+          >
+        </div>
+      </div>
+    </div>
+    <!--botones registrar y cancelar-->
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <input
+          type="button"
+          class="btn btn-lg btn-block botonCancelar"
+          value="Cancelar"
+        />
+      </div>
+      <div class="form-group col-md-6">
+        <input
+          type="button"
+          class="btn btn-lg btn-block botonRegistrar"
+          value="Registrar"
+        />
+      </div>
+    </div>
+  </div>
+</div>
