@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment'
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ export class FacturaService {
     urlFactura : String;
 
     constructor(private http: HttpClient) {
-      this.urlFactura = 'https://super-ahorro-5.herokuapp.com/api/facturas/'
+      this.urlFactura =`${environment.API_URL}/api/facturas/`
      }
   
      list () : Observable <any> {

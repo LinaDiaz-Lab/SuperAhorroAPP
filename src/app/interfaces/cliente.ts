@@ -5,6 +5,7 @@ export interface Cliente {
     apellido: String,
     usuario: String,
     contrasena: String,
+    correo: String,
     direcciones: Direccion [],
     telefono: String,
     tipoDoc: String,

@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { LayoutModule } from './layout/layout.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 import { InicioComponent } from './componentes/paginas/inicio/inicio.component';
 import { CategoriasComponent } from './componentes/paginas/categorias/categorias.component';
@@ -46,7 +47,8 @@ import { ListaProductoComponent } from './componentes/paginas/listas/lista-produ
     ReactiveFormsModule,
     AppRoutingModule,
     LayoutModule,
-    HttpClientModule
+    HttpClientModule,
+    CarouselModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

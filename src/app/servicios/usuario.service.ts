@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment'
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ export class UsuarioService {
   urlUsuario : String;
 
   constructor(private http: HttpClient) {
-    this.urlUsuario = 'https://super-ahorro-5.herokuapp.com/api/usuarios/'
+    this.urlUsuario = `${environment.API_URL}/api/usuarios/`
    }
 
    list () : Observable <any> {

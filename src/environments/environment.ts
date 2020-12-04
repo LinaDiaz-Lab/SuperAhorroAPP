@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  API_URL:'mongodb+srv://LeoGrrz:Colombia2020@cluster0.hgh0w.mongodb.net/superAhorro?retryWrites=true&w=majority'
+  API_URL:'http://localhost:3000'
 };
 
 /*

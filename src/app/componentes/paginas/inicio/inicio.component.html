@@ -64,33 +64,42 @@
 </div>
 
 <div class="my-3 p-4">
-<!-- Flickity HTML init -->
-<div class="carousel js-flickity">
-  <!-- images from unsplash.com -->
-  <div class="carousel-cell">
-    <img src="../assets/img/002-frutas.svg" alt="." class="rounded mx-auto d-block">
-    <a routerLink="/categorias/panypasteleria" class="cate1"><p class="font-weight-bold m-0">Frutas y Verduras</p></a>
-  </div>
-  <div class="carousel-cell">
-    <img src="../assets/img/002-productos-lacteos.svg" alt="." class="rounded mx-auto d-block">
-    <a routerLink="/categorias/panypasteleria" class="cate2"><p class="font-weight-bold m-0">Carnes</p></a>
-  </div>
-  <div class="carousel-cell">
-    <img src="../assets/img/002-productos-congelados.svg" alt="." class="rounded mx-auto d-block">
-    <a routerLink="/categorias/panypasteleria" class="cate3"><p class="font-weight-bold m-0 text-center">Congelados</p></a>
-  </div>
-  <div class="carousel-cell">
-    <img src="../assets/img/003-despensa.svg" alt="." class="rounded mx-auto d-block">
-    <a routerLink="/categorias/panypasteleria" class="cate4"><p class="font-weight-bold m-0 text-center">Despensa</p></a>
-  </div>
-  <div class="carousel-cell">
-    <img src="../assets/img/003-bebidas.svg" alt="." class="rounded mx-auto d-block">
-    <a routerLink="/categorias/panypasteleria" class="cate5"><p class="font-weight-bold m-0 text-center">Bebidas</p></a>
-  </div>
-  <div class="carousel-cell">
-    <img src="../assets/img/panaderia.svg" alt="." class="rounded mx-auto d-block">
-    <a routerLink="/categorias/panypasteleria" class="cate6"><p class="font-weight-bold m-0 text text-center">Pan y pasteleria</p></a>
-  </div>
-</div>
-
+  <owl-carousel-o [options]="customOptions">
+    <ng-template carouselSlide>
+      <img src="../assets/img/002-frutas.svg" alt="." class="lista rounded mx-auto d-block mx-2">
+      <a routerLink="/categorias/frutasyverduras" class="cate1">
+        <p class="font-weight-bold m-0 text-center">Frutas y Verduras</p>
+      </a>
+    </ng-template>
+    <ng-template carouselSlide >
+      <img src="../assets/img/002-productos-lacteos.svg" alt="." class="lista rounded mx-auto d-block">
+      <a routerLink="/categorias/carnes" class="cate2">
+        <p class="font-weight-bold m-0 text-center">Carnes</p>
+      </a>
+    </ng-template>
+    <ng-template carouselSlide >
+      <img src="../assets/img/002-productos-congelados.svg" alt="." class="lista rounded mx-auto d-block">
+      <a routerLink="/categorias/congelados" class="cate3">
+        <p class="font-weight-bold m-0 text-center">Congelados</p>
+      </a>
+    </ng-template>
+    <ng-template carouselSlide >
+      <img src="../assets/img/003-despensa.svg" alt="." class="lista rounded mx-auto d-block">
+      <a routerLink="/categorias/despensa" class="cate4">
+        <p class="font-weight-bold m-0 text-center">Despensa</p>
+      </a>
+    </ng-template>
+    <ng-template carouselSlide >
+      <img src="../assets/img/003-bebidas.svg" alt="." class="lista rounded mx-auto d-block">
+      <a routerLink="/categorias/bebidas" class="cate5">
+        <p class="font-weight-bold m-0 text-center">Bebidas</p>
+      </a>
+    </ng-template>
+    <ng-template carouselSlide >
+      <img src="../assets/img/panaderia.svg" alt="." class="lista rounded mx-auto d-block ">
+      <a routerLink="/categorias/panypasteleria" class="cate6">
+        <p class="font-weight-bold m-0 text text-center">Pan y pasteleria</p>
+      </a>
+    </ng-template>
+  </owl-carousel-o>
 </div>

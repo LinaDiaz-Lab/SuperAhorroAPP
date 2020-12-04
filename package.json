@@ -21,10 +21,11 @@
     "@angular/router": "~11.0.0",
     "bootstrap": "^4.5.3",
     "cors": "^2.8.5",
-    "flickity": "^2.2.1",
     "jquery": "^3.5.1",
+    "ngx-owl-carousel-o": "^4.0.0",
     "popper.js": "^1.16.1",
     "rxjs": "~6.6.0",
+    "sweetalert": "^2.1.2",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
   },

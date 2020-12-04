@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Cliente } from '../interfaces/cliente'
+import { environment } from '../../environments/environment'
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ export class ClienteService {
   urlCliente : String;
 
   constructor(private http: HttpClient) {
-    this.urlCliente = 'https://localhost:3000/api/clientes/'
+    this.urlCliente = `${environment.API_URL}/api/clientes/`
    }
 
    list () {
