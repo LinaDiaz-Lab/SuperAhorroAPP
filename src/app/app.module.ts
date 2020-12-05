@@ -4,9 +4,10 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { LayoutModule } from './layout/layout.module';
 import { HttpClientModule } from '@angular/common/http';
-import { AppComponent } from './app.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
+import { AppComponent } from './app.component';
 import { InicioComponent } from './componentes/paginas/inicio/inicio.component';
 import { CategoriasComponent } from './componentes/paginas/categorias/categorias.component';
 import { CarritoComponent } from './componentes/paginas/carrito/carrito.component';
@@ -21,6 +22,7 @@ import { ListaUsuarioComponent } from './componentes/paginas/listas/lista-usuari
 import { ListaFacturaComponent } from './componentes/paginas/listas/lista-factura/lista-factura.component';
 import { ListaClienteComponent } from './componentes/paginas/listas/lista-cliente/lista-cliente.component';
 import { ListaProductoComponent } from './componentes/paginas/listas/lista-producto/lista-producto.component';
+import { InisioSesionCuentaComponent } from './componentes/usuario/inisio-sesion-cuenta/inisio-sesion-cuenta.component';
 
 
 @NgModule({
@@ -39,7 +41,8 @@ import { ListaProductoComponent } from './componentes/paginas/listas/lista-produ
     ListaUsuarioComponent,
     ListaFacturaComponent,
     ListaClienteComponent,
-    ListaProductoComponent
+    ListaProductoComponent,
+    InisioSesionCuentaComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +51,8 @@ import { ListaProductoComponent } from './componentes/paginas/listas/lista-produ
     AppRoutingModule,
     LayoutModule,
     HttpClientModule,
-    CarouselModule 
+    CarouselModule,
+    BrowserAnimationsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

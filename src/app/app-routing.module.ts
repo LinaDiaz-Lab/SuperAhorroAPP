@@ -11,6 +11,7 @@ import { InicioSesionComponent } from './componentes/usuario/inicio-sesion/inici
 import { ActualizarDatosComponent } from './componentes/usuario/actualizar-datos/actualizar-datos.component';
 import { AdministracionComponent } from './componentes/paginas/administracion/administracion.component';
 import { PaginaNoEncontradaComponent } from './componentes/paginas/pagina-no-encontrada/pagina-no-encontrada.component';
+import { InisioSesionCuentaComponent } from './componentes/usuario/inisio-sesion-cuenta/inisio-sesion-cuenta.component';
 
 const routes: Routes = [
   {
@@ -60,9 +61,14 @@ const routes: Routes = [
     component:CategoriasComponent
   },
   {
-    path: 'administracion',// http://localhost:4200/registro
+    path: 'administracion',// http://localhost:4200/administracion
     //componenetes que va abrir
     component:AdministracionComponent
+  },
+  {
+    path: 'cuenta',// http://localhost:4200/cuenta
+    //componenetes que va abrir
+    component:InisioSesionCuentaComponent
   },
   {
     path: '**',

@@ -1,18 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
+import { ClienteService } from '../../servicios/cliente.service';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent{
   role = 'Administrador';
+  token = null;
 
-  constructor() {
-  
+  constructor( private clienteServicio: ClienteService ) {
+    this.clienteServicio.token$.subscribe((token) => {
+      console.log('token', token)
+      this.token = token
+    })
   }
 
-  ngOnInit(): void {
+  cerrarSesion(){
+    this.clienteServicio.cerrarSesion()
   }
-
 }

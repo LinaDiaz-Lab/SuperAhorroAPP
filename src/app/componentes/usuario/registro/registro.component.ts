@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ClienteService } from '../../../servicios/cliente.service';
-import swal from 'SweetAlert';
+import swal from 'sweetalert';
 
 @Component({
   selector: 'app-registro',

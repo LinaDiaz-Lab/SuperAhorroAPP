@@ -5,11 +5,11 @@
           loading="lazy">
       </a>
       <div class="navbar-nav w-100 justify-content-end">
-        <a class="nav-link mx-3" routerLink="/historial">
+        <a *ngIf="token" class="nav-link mx-3" routerLink="/historial">
           <img src="../assets/img/001-historia.svg" width="60px" height="60px" aclass="align-top" alt=".">
           <p class="font-weight-bold m-0">Historial</p>
         </a>
-        <a class="nav-link mx-3" routerLink="/carrito">
+        <a *ngIf="token" class="nav-link mx-3" routerLink="/carrito">
           <img src="../assets/img/003-carrito-de-compras.svg" width="60px" height="60px" aclass="align-top" alt=".">
           <p class="font-weight-bold m-0 pl-1">Carrito</p>
         </a>
@@ -22,16 +22,17 @@
         </a>
 
         <div class="dropleft mx-3 ">
-          <a class="btn  dropleft-toggle" href="#" role="button" id="dropdownMenuLink"
+          <a class="btn  dropleft-toggle" role="button" id="dropdownMenuLink"
               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <img src="../assets/img/004-usuario.svg" width="60px" height="60px" aclass="align-top" alt=".">
               <p class="font-weight-bold m-0" style="opacity: 60%;">Cuenta</p>
           </a>
 
           <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <a class="dropdown-item" routerLink="/iniciarSesion">Iniciar Sesion</a>
-              <a class="dropdown-item" routerLink="/registro">Registrarse</a>
+              <a *ngIf="token === null" class="dropdown-item" routerLink="/iniciarSesion">Iniciar Sesion</a>
+              <a *ngIf="token === null" class="dropdown-item" routerLink="/registro">Registrarse</a>
               <a class="dropdown-item" routerLink="/actualizarDatos">Actualizar Datos</a>
+              <a class="dropdown-item" (click)="cerrarSesion()">Cerrar Sesion</a>
           </div>
       </div>
       </div>
