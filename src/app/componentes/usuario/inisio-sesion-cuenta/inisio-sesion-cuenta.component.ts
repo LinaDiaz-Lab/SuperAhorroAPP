@@ -25,9 +25,8 @@ export class InisioSesionCuentaComponent implements OnInit {
     console.log('token en el constructor', this.token)
   }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
+  
   inisiarSesion() {
     if (this.formularioInisioDeSesion.valid) {
       this.clienteServicio.autenticacion(this.formularioInisioDeSesion.value)
@@ -45,7 +44,7 @@ export class InisioSesionCuentaComponent implements OnInit {
             console.error('Error en la autenticación: ', error);
             swal(
               {
-                title: "Error al iniciar sesion",
+                title: error.error.error,
                 text: "Intenta de nuevo",
                 icon: "warning",
                 dangerMode: true,

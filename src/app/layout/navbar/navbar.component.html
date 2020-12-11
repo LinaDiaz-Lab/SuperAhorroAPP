@@ -5,11 +5,11 @@
           loading="lazy">
       </a>
       <div class="navbar-nav w-100 justify-content-end">
-        <a *ngIf="token" class="nav-link mx-3" routerLink="/historial">
+        <a class="nav-link mx-3" routerLink="/historial">
           <img src="../assets/img/001-historia.svg" width="60px" height="60px" aclass="align-top" alt=".">
           <p class="font-weight-bold m-0">Historial</p>
         </a>
-        <a *ngIf="token" class="nav-link mx-3" routerLink="/carrito">
+        <a  class="nav-link mx-3" routerLink="/carrito">
           <img src="../assets/img/003-carrito-de-compras.svg" width="60px" height="60px" aclass="align-top" alt=".">
           <p class="font-weight-bold m-0 pl-1">Carrito</p>
         </a>
@@ -29,9 +29,9 @@
           </a>
 
           <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <a *ngIf="token === null" class="dropdown-item" routerLink="/iniciarSesion">Iniciar Sesion</a>
-              <a *ngIf="token === null" class="dropdown-item" routerLink="/registro">Registrarse</a>
-              <a class="dropdown-item" routerLink="/actualizarDatos">Actualizar Datos</a>
+              <a *ngIf="info === null" class="dropdown-item" routerLink="/inicioSesion">Iniciar Sesion</a>
+              <a *ngIf="info === null" class="dropdown-item" routerLink="/registro">Registrarse</a>
+              <a class="dropdown-item" [routerLink]="['/actualizarDatos', info.id]">Actualizar Datos</a>
               <a class="dropdown-item" (click)="cerrarSesion()">Cerrar Sesion</a>
           </div>
       </div>
@@ -52,12 +52,12 @@
           aria-haspopup="true" aria-expanded="false">Categoria</button>
         <div class="barra form-group d-flex justify-content-end">
           <div class="categoria dropdown-menu">
-            <a class="dropdown-item" routerLink="/categorias/panypasteleria">Pan y pasteleria</a>
-            <a class="dropdown-item" routerLink="/categorias/carnes">Carnes</a>
-            <a class="dropdown-item" routerLink="/categorias/bebidas">Bebidas</a>
-            <a class="dropdown-item" routerLink="/categorias/frutasyverduras">Frutas y verduras</a>
-            <a class="dropdown-item" routerLink="/categorias/despensa">Despensa</a>
-            <a class="dropdown-item" routerLink="/categorias/congelados">Congelados</a>
+            <a class="dropdown-item" routerLink="/categorias/Pan y Pasteleria">Pan y pasteleria</a>
+            <a class="dropdown-item" routerLink="/categorias/Carnes">Carnes</a>
+            <a class="dropdown-item" routerLink="/categorias/Bebidas">Bebidas</a>
+            <a class="dropdown-item" routerLink="/categorias/Frutas y verduras">Frutas y verduras</a>
+            <a class="dropdown-item" routerLink="/categorias/Despensa">Despensa</a>
+            <a class="dropdown-item" routerLink="/categorias/Congelados">Congelados</a>
           </div>
         </div>
       </div>

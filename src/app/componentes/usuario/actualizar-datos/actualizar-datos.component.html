@@ -1,53 +1,60 @@
-<div class="contenedor">
 
-    <div class="fondoImagen">
-      <img src="../../../assets/img/fondo.jpg" class="d-block w-100" alt="...">
-    </div>
-  
-      <section class="contenido p-5 m-2 rounded" style="background-color: #68D93C">
-  
-        <div class="imagen d-flex justify-content-center">
-          <img src="../../../assets/img/usuario.png" alt="..">
+    <div class="fondo">
+    <div class="contenedor my-2">
+      <div class="form-row">
+        <div class="form-group col-md-12 text-center">
+          <img src="../../../../assets/img/usuario.png" class="imagen" />
+          <h1 class="H1">Actualizar tus Datos</h1>
         </div>
-  
-        <div class="d-flex justify-content-center p-2">
-          <h1>Actualizar tus Datos</h1>
-        </div>      
-  
-          <form>
-  
-              <div class="formulario form-group row mb-0">
-                  <label for="statictext" class="col-sm-2 col-form-label" >Cliente</label>
-                  <div class="col-sm-10">
-                    <input type="text" readonly class="form-control-plaintext text-light font-weight-bold " id="statictext" value="Lian">
-                  </div>
-              </div>
-  
-              <div class="formulario form-group">
-                  <label for="exampleInputEmail1">Email</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                </div>
-                <div class="formulario form-group">
-                  <label for="exampleInputNumber">Numero de telefono</label>
-                  <input type="tel" class="form-control" id="exampleInputNumber">
-                </div>
-  
-                <div class="form-row">
-                  <div class="formulario form-group col-md-6">
-                    <label for="inputdocumento3">Tipo de documento</label>
-                    <input type="tel" class="form-control" id="inputdocumento3">
-                  </div>
-                  <div class="formulario form-group col-md-6">
-                    <label for="inputdocumento4">N documento</label>
-                    <input type="tel" class="form-control" id="inputdocumento4">
-                  </div>
-                 </div> 
-                 <div class="d-flex justify-content-center">
-                   <button type="submit" class="btn btn-warning rounded-pill px-5 m-2 font-weight-bold">Guardar</button>
-                   <button type="submit" class="btn btn-danger rounded-pill px-5 m-2 font-weight-bold">Cancelar</button>
-                 </div>
-                
-            </form>
-      </section>
-    </div>
+      </div>    
 
+        <form class="needs-validation" [formGroup]="formularioActualizarDatos" (ngSubmit)="actualizarDatos()">
+
+            <div class="formulario form-group row ml-1">
+                <h5 class="text-light">Usuario {{ cliente.usuario }}</h5>
+            </div>
+
+            <div class="formulario form-group">
+                <label for="exampleInputName">Nombre</label>
+                <input type="email" class="form-control" formControlName="nombre" id="exampleInputName" aria-describedby="emailHelp">
+              </div>
+              <div class="formulario form-group">
+                <label for="exampleInputName2">Apellido</label>
+                <input type="tel" class="form-control" formControlName="apellido" id="exampleInputName2">
+              </div>
+
+              <div class="formulario form-group">
+                <label for="exampleInputNumber">Telefono</label>
+                <input type="tel" class="form-control" formControlName="telefono" id="exampleInputNumber">
+              </div>
+
+              <div class="formulario form-group">
+                <label for="exampleInputEmail">Correo</label>
+                <input type="tel" class="form-control" formControlName="correo" id="exampleInputEmail">
+              </div>
+
+              <div class="form-row">
+                <div class="formulario form-group col-md-6">
+                  <label for="inputdocumento3">Tipo de documento</label>
+                  <select formControlName="tipoDoc" id="inputdocumento3" [class]="'custom-select custom-select-lg mb-2 ' + (formularioActualizarDatos.controls.tipoDoc.errors ? 'border-danger' : 'border-success')">
+                    <option value="Cedula de ciudadania" >Cedula de ciudadania</option>
+                    <option value="Pasaporte">Pasaporte</option>
+                    <option value="Licencia">Licencia</option>
+                  </select>
+                </div>
+
+                <div class="formulario form-group col-md-6">
+                  <label for="inputdocumento4">N documento</label>
+                  <input type="tel" class="form-control" formControlName="numDoc" id="inputdocumento4">
+                </div>
+               </div> 
+               <div class="d-flex justify-content-center">
+
+                 <button type="submit" class="btn btn-warning rounded-pill px-5 m-2 font-weight-bold">Guardar</button>
+                 <button class="btn btn-danger rounded-pill px-5 m-2 font-weight-bold">Cancelar</button>
+               </div>
+              
+          </form>
+      
+    </div>
+  </div>

@@ -36,7 +36,7 @@ const routes: Routes = [
     component:CarritoComponent
   },
   {
-    path: 'actualizarDatos',// http://localhost:4200/inicio
+    path: 'actualizarDatos/:id',// http://localhost:4200/inicio
     //componenetes que va abrir
     component:ActualizarDatosComponent
   },
@@ -66,14 +66,14 @@ const routes: Routes = [
     component:AdministracionComponent
   },
   {
-    path: 'cuenta',// http://localhost:4200/cuenta
+    path: 'inicioSesion',// http://localhost:4200/cuenta
     //componenetes que va abrir
     component:InisioSesionCuentaComponent
   },
   {
     path: '**',
     component: PaginaNoEncontradaComponent
- }
+  }
 ];
 
 @NgModule({

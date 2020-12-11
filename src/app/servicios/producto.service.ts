@@ -15,7 +15,7 @@ export class ProductoService {
    }
 
    list () : Observable <any> {
-    return this.http.get(this.urlProducto+'list');
+    return this.http.get<any>(this.urlProducto+'list');
    }
 
    create (producto) {
