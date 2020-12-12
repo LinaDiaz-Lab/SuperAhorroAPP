@@ -29,10 +29,10 @@
           </a>
 
           <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <a *ngIf="info === null" class="dropdown-item" routerLink="/inicioSesion">Iniciar Sesion</a>
-              <a *ngIf="info === null" class="dropdown-item" routerLink="/registro">Registrarse</a>
-              <a class="dropdown-item" [routerLink]="['/actualizarDatos', info.id]">Actualizar Datos</a>
-              <a class="dropdown-item" (click)="cerrarSesion()">Cerrar Sesion</a>
+            <a *ngIf="info === null" class="dropdown-item" routerLink="/inicioSesion">Iniciar Sesion</a>
+            <a *ngIf="info === null" class="dropdown-item" routerLink="/registro">Registrarse</a>
+            <a *ngIf="info" class="dropdown-item" [routerLink]="['/actualizarDatos', (info ? info.id : null)]">Actualizar Datos</a>
+            <a *ngIf="info" class="dropdown-item" (click)="cerrarSesion()">Cerrar Sesion</a>
           </div>
       </div>
       </div>
