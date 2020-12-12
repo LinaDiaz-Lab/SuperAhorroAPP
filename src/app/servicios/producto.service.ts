@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment'
+import { Producto } from '../interfaces/producto'
 
 @Injectable({
   providedIn: 'root'
@@ -11,11 +12,11 @@ export class ProductoService {
   urlProducto : String;
 
   constructor(private http: HttpClient) {
-    this.urlProducto = `${environment.API_URL}/api/usuarios/`
+    this.urlProducto = `${environment.API_URL}/api/productos/`
    }
 
-   list () : Observable <any> {
-    return this.http.get<any>(this.urlProducto+'list');
+   list () {
+    return this.http.get<Array<Producto>>(this.urlProducto+'list');
    }
 
    create (producto) {

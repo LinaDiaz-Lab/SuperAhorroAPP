@@ -1,7 +1,5 @@
 import { Component} from '@angular/core';
 import { ClienteService } from '../../servicios/cliente.service';
-import { ActivatedRoute, Params } from '@angular/router';
-import { Cliente } from '../../interfaces/cliente'
 
 @Component({
   selector: 'app-navbar',

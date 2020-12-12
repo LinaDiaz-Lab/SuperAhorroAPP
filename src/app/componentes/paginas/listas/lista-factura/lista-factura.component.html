@@ -6,7 +6,7 @@
           <th scope="col">#</th>
           <th scope="col">Numero Factura</th>
           <th scope="col">Fecha</th>
-          <th scope="col">Usuario</th>
+          <th scope="col">Cliente</th>
           <th scope="col">Total</th>
           <th scope="col">IVA</th>
           <th scope="col">Total + IVA</th>
@@ -14,16 +14,16 @@
           <th scope="col">Actualizar</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody *ngFor="let factura of facturas;let i=index">
         <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>23589335</td>
-          <td>1423525</td>
-          <td>23589335</td>
-          <td>23589335</td>
-          <td>23589335</td>
+          <th scope="row">{{ i+1 }}</th>
+          <td>{{ factura._id }}</td>
+          <td>{{ factura.fecha }}</td>
+          <td>{{ factura.idCliente }}</td>
+          <td>{{ factura.total }}</td>
+          <td>{{ factura.iva }}</td>
+          <td>{{ factura.totalIva }}</td>
+          <td>{{ factura.idDireccion }}</td>
           <td><button type="button" class="btn btn-warning btn-sm py-0 px-3">Actualizar</button></td>
         </tr>
       </tbody>

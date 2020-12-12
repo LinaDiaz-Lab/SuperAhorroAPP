@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment'
+import { Factura } from '../interfaces/factura';
 
 @Injectable({
   providedIn: 'root'
@@ -13,8 +14,8 @@ export class FacturaService {
       this.urlFactura =`${environment.API_URL}/api/facturas/`
      }
   
-     list () : Observable <any> {
-      return this.http.get(this.urlFactura+'list');
+     list () {
+      return this.http.get<Array<Factura>>(this.urlFactura+'list');
      }
   
      create (factura) {

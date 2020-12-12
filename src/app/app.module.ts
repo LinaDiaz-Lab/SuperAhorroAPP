@@ -24,10 +24,7 @@ import { ListaClienteComponent } from './componentes/paginas/listas/lista-client
 import { ListaProductoComponent } from './componentes/paginas/listas/lista-producto/lista-producto.component';
 import { InisioSesionCuentaComponent } from './componentes/usuario/inisio-sesion-cuenta/inisio-sesion-cuenta.component';
 
-//firebase
-import { AngularFireModule} from '@angular/fire';
-import { AngularFireAuthModule} from '@angular/fire/auth';
-import { AuthService } from '../app/servicios/auth.service'
+
 
 @NgModule({
   declarations: [
@@ -56,19 +53,9 @@ import { AuthService } from '../app/servicios/auth.service'
     LayoutModule,
     HttpClientModule,
     CarouselModule,
-    BrowserAnimationsModule,
-    AngularFireModule.initializeApp({
-      apiKey: "AIzaSyBPKcULY4pTomeV74BMUnHlMekn2k7YC0U",
-      authDomain: "superahorro-6d495.firebaseapp.com",
-      projectId: "superahorro-6d495",
-      storageBucket: "superahorro-6d495.appspot.com",
-      messagingSenderId: "293175854666",
-      appId: "1:293175854666:web:9e9b5fa7313a131bafc8b3",
-      measurementId: "G-EDX3BSVMR8"
-    }),
-    AngularFireAuthModule 
+    BrowserAnimationsModule
   ],
-  providers: [AuthService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
