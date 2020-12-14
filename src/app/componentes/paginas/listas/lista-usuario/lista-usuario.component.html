@@ -1,5 +1,6 @@
 <div class="m-2">
-    <h2 class="text-center">Usuario</h2>
+  <h2 class="text-center">Usuario</h2>
+  <div class="tabla overflow-auto mb-4">
     <table class="table">
       <thead class=" text-light bg-secondary">
         <tr>
@@ -11,16 +12,65 @@
           <th scope="col">Actualizar</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody *ngFor="let usuario of usuarios;let i=index">
         <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>23589335</td>
+          <th scope="row">{{ i+1 }}</th>
+          <td>{{ usuario.nombre }}</td>
+          <td>{{ usuario.ocupacion }}</td>
+          <td>{{ usuario.correo }}</td>
           <td><button type="button" class="btn btn-danger btn-sm py-0 px-3">Eliminiar</button></td>
           <td><button type="button" class="btn btn-warning btn-sm py-0 px-3">Actualizar</button></td>
         </tr>
       </tbody>
     </table>
-    <button type="button" class="btn btn-success">Crear Usuario</button>
   </div>
+</div>
+
+<!--Formulario crear producto-->
+<ng-template #contenido let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Registro Usuario</h4>
+    <button class="close" aria-label="close" type="button" (click)="modal.dismiss()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <div class="modal-body">
+    <form class="needs-validation" [formGroup]="formularioCrearUsuario">
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="nombre" class="titulo">Nombre:</label>
+          <input type="text" class="form-control" id="nombre" formControlName="nombre" required />
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <label class="titulo" for="ocupacion">Ocupacion:</label>
+          <input type="text" id="ocupacion" class="form-control" formControlName="ocupacion" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="col">
+          <label for="correo">Correo:</label>
+          <input type="email" class="form-control" formControlName="correo" id="correo" required />
+        </div>
+        <div class="col">
+          <label for="contrasena">Contraseña:</label>
+          <input type="password" formControlName="contrasena" class="form-control" id="contrasena" required />
+        </div>
+      </div>
+
+    </form>
+  </div>
+
+  <div class="modal-footer">
+
+    <button class="btn btn-danger rounded-pill px-5 m-2 font-weight-bold" (click)="modal.close()">Cancelar</button>
+    <button class="btn btn-warning text-light rounded-pill px-5 m-2 font-weight-bold"
+      (click)="crearUsuarios()">Registrar</button>
+
+  </div>
+</ng-template>
+
+<button type="button" class="btn btn-success m-2" (click)="open(contenido)">Registrar Usuario
+</button>

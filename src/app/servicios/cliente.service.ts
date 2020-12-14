@@ -33,8 +33,11 @@ export class ClienteService {
    }
 
    delete (id) {
-    let headers = new HttpHeaders().set('Content-Type', 'application/json');
-
+    let headers = new HttpHeaders({ 
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${localStorage.getItem('SuperAhorroClient')}`
+     })
+     
     return this.http.delete(this.urlCliente+`delete/${id}`,{headers: headers});
    }
 

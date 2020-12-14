@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FacturaService } from 'src/app/servicios/factura.service';
+import { UsuarioService } from 'src/app/servicios/usuario.service';
 import { Factura } from '../../../../interfaces/factura'
 
 @Component({
@@ -9,13 +10,22 @@ import { Factura } from '../../../../interfaces/factura'
 })
 export class ListaFacturaComponent implements OnInit {
   facturas : Array<Factura> = [];
+  info;
 
   constructor(
-    private facturaServicio: FacturaService
+    private facturaServicio: FacturaService,
+    private servicioUsuarios: UsuarioService
   ) { }
 
   ngOnInit(): void {
-    this.cargarFacturas()
+    this.servicioUsuarios.token$.subscribe(
+      (usuario)=>{
+        this.info = usuario
+        if(this.info ){
+          this.cargarFacturas()
+        }
+      }
+    )
   }
   
   cargarFacturas() {

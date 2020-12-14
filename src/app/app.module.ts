@@ -23,6 +23,7 @@ import { ListaFacturaComponent } from './componentes/paginas/listas/lista-factur
 import { ListaClienteComponent } from './componentes/paginas/listas/lista-cliente/lista-cliente.component';
 import { ListaProductoComponent } from './componentes/paginas/listas/lista-producto/lista-producto.component';
 import { InisioSesionCuentaComponent } from './componentes/usuario/inisio-sesion-cuenta/inisio-sesion-cuenta.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -53,7 +54,8 @@ import { InisioSesionCuentaComponent } from './componentes/usuario/inisio-sesion
     LayoutModule,
     HttpClientModule,
     CarouselModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -36,10 +36,10 @@ export class RegistroComponent implements OnInit {
       this.clienteServicio.create(this.formularioDeRegistro.value)
       .subscribe(
         (res) => {
-          console.log('Exito al registrar el cliente', res)
+          console.log('Exito al registrare', res)
         },
         (error) => {
-          console.error('Error al registrar cliente', error)
+          console.error('Error al registrarte', error)
 
           const campo = Object.keys(error.error.detalle.errors)
 

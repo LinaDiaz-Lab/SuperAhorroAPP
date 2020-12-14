@@ -14,6 +14,10 @@ export class ListaClienteComponent implements OnInit {
   constructor( private clienteService: ClienteService ) { }
 
   ngOnInit(): void {
+     this.cargarClientes()
+  }
+
+  cargarClientes(){ 
     this.clienteService.list()
     .subscribe( (res) => {
       this.clientes = res
@@ -22,6 +26,14 @@ export class ListaClienteComponent implements OnInit {
       console.error('Error al intentar encontrar los clientes', error)
     }
      )
+  }
+
+  eliminarUsuarios(){
+
+  }
+
+  actualizarUsuarios(){
+    
   }
 
 }

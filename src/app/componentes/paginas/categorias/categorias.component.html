@@ -1,5 +1,5 @@
-<div>
-  <h1 class="titulo1">Frutas y verduras</h1>
+<div >
+  <h1 class="titulo1">{{this.categoria}}</h1>
   <hr class="lineas">
 </div>
 <div>
@@ -18,7 +18,7 @@
             <img [src]="item.urlImg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">{{ item.nombre }}</h5>
-              <p class="card-text h5">Precio: $ {{ item.precio }}</p>
+              <p class="card-text h5">Precio: {{ item.precio | currency: 'USD' }}</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary text-white">Agregar</button>

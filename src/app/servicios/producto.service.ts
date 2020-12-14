@@ -21,19 +21,28 @@ export class ProductoService {
 
    create (producto) {
     let params = JSON.stringify(producto);//convertir el objeto a uno objeto JSON
-    let headers = new HttpHeaders().set('Content-Type', 'application/json');
+    let headers = new HttpHeaders({ 
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${localStorage.getItem('SuperAhorroClient')}`
+     })
 
     return this.http.post(this.urlProducto+'create',params,{headers: headers});
    }
 
    delete (id) {
-    let headers = new HttpHeaders().set('Content-Type', 'application/json');
+    let headers = new HttpHeaders({ 
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${localStorage.getItem('SuperAhorroClient')}`
+     })
 
     return this.http.delete(this.urlProducto+`delete/${id}`,{headers: headers});
    }
 
    update (id) {
-    let headers = new HttpHeaders().set('Content-Type', 'application/json');
+    let headers = new HttpHeaders({ 
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${localStorage.getItem('SuperAhorroClient')}`
+     })
 
     return this.http.put(this.urlProducto+`update/${id}`,{headers: headers});
    }

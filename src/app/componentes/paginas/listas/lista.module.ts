@@ -1,10 +1,13 @@
 import { CommonModule } from '@angular/common'
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms'
 import { RouterModule } from '@angular/router';
+
 import { ListaClienteComponent } from './lista-cliente/lista-cliente.component';
 import { ListaFacturaComponent } from './lista-factura/lista-factura.component';
 import { ListaUsuarioComponent } from './lista-usuario/lista-usuario.component';
-import { ListaProductoComponent } from './lista-producto/lista-producto.component'
+import { ListaProductoComponent } from './lista-producto/lista-producto.component';
+
 
 @NgModule({
   declarations: [
@@ -14,6 +17,8 @@ import { ListaProductoComponent } from './lista-producto/lista-producto.componen
     ListaProductoComponent
   ],
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule,
     CommonModule
   ],

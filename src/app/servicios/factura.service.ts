@@ -15,7 +15,12 @@ export class FacturaService {
      }
   
      list () {
-      return this.http.get<Array<Factura>>(this.urlFactura+'list');
+      let headers = new HttpHeaders({ 
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${localStorage.getItem('SuperAhorroClient')}`
+       })
+
+      return this.http.get<Array<Factura>>(this.urlFactura+'list',{headers: headers});
      }
   
      create (factura) {
