@@ -1,6 +1,7 @@
 export interface Usuario {
-    nombre: String;
-    ocupacion: String;
-    correo: String;
-    contrasena: String
+    _id: string;
+    nombre: string;
+    ocupacion: string;
+    correo: string;
+    contrasena: string
 }

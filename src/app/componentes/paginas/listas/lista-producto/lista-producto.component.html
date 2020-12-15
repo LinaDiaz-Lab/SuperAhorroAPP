@@ -20,7 +20,7 @@
           <td>{{ producto.marca }}</td>
           <td>{{ producto.precio }}</td>
           <td>{{ producto.cantInventario }}</td>
-          <td><button type="button" class="btn btn-danger btn-sm py-0 px-3">Eliminiar</button></td>
+          <td><button type="button" class="btn btn-danger btn-sm py-0 px-3" (click)="eliminarProducto(producto._id)">Eliminiar</button></td>
           <td><button type="button" class="btn btn-warning btn-sm py-0 px-3">Actualizar</button></td>
         </tr>
       </tbody>

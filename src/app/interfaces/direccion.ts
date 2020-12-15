@@ -1,4 +1,4 @@
 export interface Direccion {
-    barrio: String;
-    ubicacion: String
+    barrio: string;
+    ubicacion: string
 }

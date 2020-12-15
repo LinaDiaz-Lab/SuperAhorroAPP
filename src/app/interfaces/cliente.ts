@@ -1,15 +1,15 @@
 import { Direccion } from './direccion'
 
 export interface Cliente {
-    _id: String;
-    nombre: String;
-    apellido: String;
-    usuario: String;
-    contrasena: String;
-    correo: String;
+    _id: string;
+    nombre: string;
+    apellido: string;
+    usuario: string;
+    contrasena: string;
+    correo: string;
     direcciones: Direccion [];
-    telefono: String;
-    tipoDoc: String;
-    numDoc: String;
-    fechaRegistro: String
+    telefono: string;
+    tipoDoc: string;
+    numDoc: string;
+    fechaRegistro: string
 }

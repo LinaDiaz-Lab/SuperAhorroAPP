@@ -14,6 +14,7 @@ export class CategoriasComponent implements OnInit {
   categoria: any;
   listaCategoria: Producto [] = []
   productoZoom: Producto = {
+    _id:'',
     nombre: '',
     marca: '', 
     precio: 0,

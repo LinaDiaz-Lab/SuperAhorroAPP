@@ -58,8 +58,20 @@ export class ListaProductoComponent implements OnInit {
     )
   }
 
-  eliminarProducto(){
-
+  eliminarProducto(id){
+    this.servicioProducto.delete(id)
+    .subscribe(
+      (productoEliminado) =>{
+        swal({
+          title: "Producto Eliminado",
+          icon: "success",
+        });
+        this.cargarProductos();
+       },
+      (err) => {
+        console.error('Error ', err)
+      }
+    )
   }
 
   actualizarProducto(){

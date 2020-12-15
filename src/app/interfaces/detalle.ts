@@ -1,6 +1,6 @@
 export interface Detalle {
-    idProducto: String;
-    precioUnitario: Number;
-    cantidad: Number;
-    total: Number
+    idProducto: string;
+    precioUnitario: number;
+    cantidad: number;
+    total: number
 }

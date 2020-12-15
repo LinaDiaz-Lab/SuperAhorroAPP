@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment'
-import { Producto } from '../interfaces/producto'
 
 @Injectable({
   providedIn: 'root'
@@ -15,8 +14,8 @@ export class ProductoService {
     this.urlProducto = `${environment.API_URL}/api/productos/`
    }
 
-   list () {
-    return this.http.get<Array<Producto>>(this.urlProducto+'list');
+   list (): Observable <any> {
+    return this.http.get<Array<any>>(this.urlProducto+'list');
    }
 
    create (producto) {

@@ -53,8 +53,20 @@ export class ListaUsuarioComponent implements OnInit {
     )
   }
 
-  eliminarUsuarios(){
-
+  eliminarUsuarios(id){
+    this.servicioUsuarios.delete(id)
+    .subscribe(
+      (usuarioEliminado) =>{
+        swal({
+          title: "Usuario Eliminado",
+          icon: "success",
+        });
+        this.cargarUsuarios();
+       },
+      (err) => {
+        console.error('Error ', err)
+      }
+    )
   }
 
   actualizarUsuarios(){
